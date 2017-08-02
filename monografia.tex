@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{mccpuc}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{amssymb,epsfig,endnotes,graphicx,url,color}
+\usepackage{caption,subcaption,color,soul,enumitem,floatrow,listings}
+\usepackage{tabularx,multirow,fancyvrb,keyval,wrapfig,cite,hyperref,soul,setspace}
+\doublespacing
+
+%% Preenchimento dos parâmetros da MCC
+\TextoPortugues{false} % 'true' para português, 'false' para inglês 
+\ISSNno{0103-9741} % Texto do ISSN
+\MCCSeqAno{01/17}  % Número e ano(YY) da MCC
+\TituloCapa{Cover Título}
+\TituloRosto{First page title}
+\MesTexto{August} % Mês por extenso, em português ou inglês
+\AnoYYYY{2017}   % Ano com 4 digitos
+\QtdLinhasTituloCapa{3} % Qtd de linhas do titulo na capa, de 1 até 4 linhas
+
+\QtdAutores{3} % Define quantidade de autores: 1, 2, ou 3
+%%%% Dados Autor 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AutorANome{First Author}
+\AutorAemail{author1@inf.puc-rio.br}
+\AutorADI{true} % 'true' se o autor for do DI
+\AutorAinst{ % Instituição do autor, caso não seja do DI
+}
+
+%%%% Dados Autor 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AutorBNome{Second Author}
+\AutorBemail{author2@inf.puc-rio.br}
+\AutorBDI{true} % 'true' se o autor for do DI
+\AutorBinst{ % Instituição do autor, caso não seja do DI
+}
+
+%%%% Dados Autor 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AutorCNome{Third author}
+\AutorCemail{author3@inf.puc-rio.br}
+\AutorCDI{true} % 'true' se o autor for do DI
+\AutorCinst{ % Instituição do autor, caso não seja do DI
+}
+
+\PatrocinioFlag{false} % 'true' para incluir nota de rodapé da folha de rosto
+\Patrocinio{ % Texto da nota de rodapé para patrocínio
+}
+
+\Resumo{  % Resumo em Português. Para Trabalho em Português
+
+}
+
+\PalavrasChave{ % Palavras-Chave em português
+}
+
+\Abstract{ % Resumo em Inglês. Para trabalhos em Português ou Inglês
+Abstract here!}
+
+\Keyword{ % Palavras-Chaves em Inglês
+Keyword 1, Keyword 2}
+
+%------------------------------------------------------------ DOCUMENT
+\begin{document}
+% Comando para geração da Capa
+\Capa
+
+% Comando para geração da Fohas de Rosto
+\FolhaRosto
+
+% TABLE OF CONTENTS -  OPTIONAL
+\Sumario{3} % Gera índice com profundidade x
+
+%---------------------- SECTIONS
+\section{Introduction}
+This is the introduction.
+
+\section{Related work}
+This is a related work section.
+
+\section{Proposal}
+This is a proposal section.
+
+\section{Conclusion}
+This is a conclusion section.
+ 
+%------------------ BIBLIOGRAPHY   
+\addcontentsline{toc}{section}{References} % Para incluir no sumário
+\bibliographystyle{abnt-puc}
+%\bibliographystyle{IEEEtran}
+\bibliography{monografia} % Nome do arquivo Bibtex (*.bib)
+
+\end{document}
+
